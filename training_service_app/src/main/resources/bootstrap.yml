@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: training_service
+    
+
+
+      
