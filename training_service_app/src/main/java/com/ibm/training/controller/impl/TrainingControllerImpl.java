@@ -6,6 +6,7 @@ package com.ibm.training.controller.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ibm.trainer.model.TrainerCompanyModel;
 import com.ibm.trainer.model.TrainerModel;
+import com.ibm.training.config.props.TrainerProperties;
 import com.ibm.training.controller.ITrainingController;
 
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +33,8 @@ public class TrainingControllerImpl implements ITrainingController {
 	@Value("${trainer.name}")
 	private String trainerName;
 	
+	@Autowired
+	TrainerProperties props;
 	List<TrainerModel> trainerModel = new ArrayList<TrainerModel>();
 	TrainingControllerImpl()
 	{
@@ -57,6 +61,8 @@ public class TrainingControllerImpl implements ITrainingController {
 		String methodName = "getAllTrainersInfo";
 		log.info(className+"->"+methodName);
 		log.info(trainerName);
+		log.info(props.getName());
+		log.info(props.getCompanies().toString());
 		return ResponseEntity.status(HttpStatus.OK).body(trainerModel);
 	}
 	

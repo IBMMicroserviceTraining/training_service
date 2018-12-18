@@ -1,2 +1,6 @@
 trainer:
   name: saket_local_Dev_dedicated
+  address: capetown
+  country: south africa
+  companies: 
+      - ibm_dedicated_dev,accenture_Dedicated_Dev,raremile_Dedicated_Dev,infosys_dedicated_Dev

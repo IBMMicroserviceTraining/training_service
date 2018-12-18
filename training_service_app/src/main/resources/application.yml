@@ -1,8 +1,13 @@
 trainer:
    name: saket_local
+   address: bangalore
+   country: india
+   companies:
+   - ibm_local,accenture_local,raremile_local,infosys_local
    
 server:
   port: 8900   
+
   
 ---
 spring:
@@ -10,13 +15,21 @@ spring:
 
 trainer:
   name: saket_local_Dev
+  address: colombo
+  country: Srilanka
+  companies:
+   - ibm_dev,accenture_dev,raremile_Dev,infosys_dev
   
 ---
 spring:
   profiles: test
 
 trainer:
-  name: saket_local_test     
+  name: saket_local_test    
+  address: Dhaka
+  country: Bangladesh 
+  companies:
+   - ibm_test,accenture_test,raremile_test,infosys_test 
 ---
 spring:
   profiles:
