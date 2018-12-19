@@ -3,7 +3,7 @@
   <parent>
     <groupId>training_service</groupId>
     <artifactId>training_service</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
   </parent>
   <groupId>training_service_api</groupId>
   <artifactId>training_service_api</artifactId>

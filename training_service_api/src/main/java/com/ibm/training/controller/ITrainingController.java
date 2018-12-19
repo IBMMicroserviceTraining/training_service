@@ -30,5 +30,5 @@ public interface ITrainingController {
 	 * @return one trainer info for the matched id. This also contains the trainer's company info
 	 */
 	@RequestMapping(value="/getinfo/{id}",method=RequestMethod.GET)
-	public ResponseEntity<TrainerModel> getTrainerModelById(@PathVariable("id") int id);
+	public ResponseEntity<TrainerModel> getTrainerModelById(@PathVariable("id") String id);
 }

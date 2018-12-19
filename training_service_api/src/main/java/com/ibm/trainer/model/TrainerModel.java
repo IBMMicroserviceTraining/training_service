@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class TrainerModel {
 
-	private int trainerId;
+	private String trainerId;
 	private String trainerName;
 	private TrainerCompanyModel trainerCompanyModel;
 }
