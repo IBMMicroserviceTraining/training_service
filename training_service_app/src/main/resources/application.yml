@@ -14,7 +14,13 @@ management:
       exposure:
         include: "*"
 
-    
+      
+
+hystrix:
+  metrics:
+    enabled: true
+
+
 ---
 spring:
   profiles: dev
