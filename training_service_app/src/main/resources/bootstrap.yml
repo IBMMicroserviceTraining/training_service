@@ -2,6 +2,14 @@ spring:
   application:
     name: training_service
     
+  cloud:
+    config:
+      uri: http://localhost:8600
 
+
+  profiles:
+    active: dev
+    
+    
 
       
