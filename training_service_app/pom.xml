@@ -3,7 +3,7 @@
   <parent>
     <groupId>training_service</groupId>
     <artifactId>training_service</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
   </parent>
   <groupId>training_service_app</groupId>
   <artifactId>training_service_app</artifactId>
@@ -11,12 +11,19 @@
   	<dependency>
   		<groupId>training_service_api</groupId>
   		<artifactId>training_service_api</artifactId>
-  		<version>0.0.3-SNAPSHOT</version>
+  		<version>0.0.5-SNAPSHOT</version>
   	</dependency>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-configuration-processor</artifactId>
   		<optional>true</optional>
+  	</dependency>
+  	<!--  For you to add this dependency, it should be present in your artifactory,other way is to add it as a lib
+  	for your local development -->
+  	<dependency>
+  		<groupId>trainer_service_api</groupId>
+  		<artifactId>trainer_service_api</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
   </dependencies>
   

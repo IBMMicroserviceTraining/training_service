@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>training_service</groupId>
   <artifactId>training_service</artifactId>
-  <version>0.0.4-SNAPSHOT</version>
+  <version>0.0.5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>
   Parent project for training service
