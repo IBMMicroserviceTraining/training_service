@@ -21,4 +21,14 @@ ribbon:
     enabled: true    
     
 
-      
+hystrix:
+  command: 
+    find-trainer-by-id:
+          execution:
+             isolation:
+                thread:
+                  timeoutInMilliseconds: 200
+   
+               
+        
+            
