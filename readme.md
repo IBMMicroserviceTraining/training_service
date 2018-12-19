@@ -13,3 +13,6 @@ Following features are implemented in the module
 
 new feature
 - Connects to a different microservice over feign client.
+Note
+-Notice the TrainerServiceFeignClient.Java in App. We need to exactly use the same methods as mentioned in the connecting Microservice. Is not that cumbersome? 
+- In the next version, we will show how multi module Spring boot project helps in removing the issues with the feign interface
