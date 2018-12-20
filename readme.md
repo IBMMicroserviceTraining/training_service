@@ -3,7 +3,7 @@ This is the parent project for Training service. It has 2 modules
 2) APP module - contains the main class and business logic
 
 
-The version is - 0.0.6-SNAPSHOT
+The version is - 0.0.7-SNAPSHOT
 
 Following features are implemented in the module
 1) Has two endpoints - to fetch trainers info
@@ -16,6 +16,7 @@ Following features are implemented in the module
   5.2) provide the hystrix.stream actuator endpoint to the dashboard to have a hystrix view
     - localhost:8900/actuator/hystrix.stream
 6) We will look at a unified hystrix dashboard with turbine in the next release.     
+7) Swagger doc has been included in this release - unified hystrix dashboard will be introduced later
 
 
 Note
