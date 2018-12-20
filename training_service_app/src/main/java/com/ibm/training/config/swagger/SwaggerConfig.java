@@ -26,7 +26,7 @@ public class SwaggerConfig {
 	}
 	
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("Ibm Service")
+		return new ApiInfoBuilder().title("Training Service")
 				.description("Return the name of the author")
 				.contact("sakkashy@in.ibm.com").license("IBM Corportaion")
 				.licenseUrl("sakkashy@in.ibm.com").version("1.0").build();
