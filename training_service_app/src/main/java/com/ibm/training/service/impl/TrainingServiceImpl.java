@@ -41,7 +41,7 @@ public class TrainingServiceImpl implements ITrainingService {
 	
 	@HystrixCommand(fallbackMethod = "findAllTrainersInfo_fallback",
 			commandProperties = {
-				       @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000"),
+				       @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "30000"),
 				       @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value="60"),
 				       @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
 				    })
@@ -69,8 +69,17 @@ public class TrainingServiceImpl implements ITrainingService {
 		String methodName = "findAllTrainersInfo_fallback";
 		log.info(className+"->"+methodName);
 		
-		log.warn("Trainer Service is down!! hystix fall back");
-		return trainerModel;
+		log.warn("Trainer Service is down!! hystrix fall back");
+		
+		List<TrainerModel> trainerModelFallback = new ArrayList<TrainerModel>();
+		trainerModel.forEach(trainerObj ->{
+			TrainerModel model = new  TrainerModel();
+			model.setTrainerId(trainerObj.getTrainerId());
+			model.setTrainerName(trainerObj.getTrainerName());
+			trainerModelFallback.add(model);
+			
+		});
+		return trainerModelFallback;
 	}
 	
 	@HystrixCommand(commandKey="find-trainer-by-id", fallbackMethod = "findTrainerModelById_fallback",
