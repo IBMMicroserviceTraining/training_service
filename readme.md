@@ -3,7 +3,7 @@ This is the parent project for Training service. It has 2 modules
 2) APP module - contains the main class and business logic
 
 
-The version is - 0.0.7-SNAPSHOT
+The version is - 0.0.8-SNAPSHOT
 
 Following features are implemented in the module
 1) Has two endpoints - to fetch trainers info
@@ -17,6 +17,7 @@ Following features are implemented in the module
     - localhost:8900/actuator/hystrix.stream
 6) We will look at a unified hystrix dashboard with turbine in the next release.     
 7) Swagger doc has been included in this release - unified hystrix dashboard will be introduced later
+8) Interceptors added to the code, example of logging using logback-spring.xml and how log files can be rolling files added.
 
 
 Note
@@ -24,4 +25,5 @@ Note
 - We do not need to write or remember the methods and exact end points this way. Reduces code and human error
 - Spring multi module project is of such a great help here. It lets us only get the API jar of trainer service.The api jar of the trainer service only has the interfaces and no implementations.
 - So the provider would not have any problem in providing the API jar. This maintains the encapsulation.
+- Size of the log files can be changed in logback-spring.xml. The file patterns can also be changed.
 
